@@ -9,6 +9,7 @@ phases:
       - echo Building an image from 1st project
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 052857637259.dkr.ecr.ap-south-1.amazonaws.com
       - REPOSITORY_URI=052857637259.dkr.ecr.ap-south-1.amazonaws.com/project12_13
+      - echo printing source directory to $CODEBUILD_SRC_DIR_binaries
       - echo printing image tag name value $IMAGE_TAG
   build:
     commands:
